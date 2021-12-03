@@ -1,7 +1,5 @@
 open System
 
-let parse s = s
-
 let input =
     IO.File.ReadLines "Day3.txt"
     |> Seq.map (fun s -> s |> Seq.toArray)

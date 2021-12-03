@@ -16,6 +16,7 @@ let parse s =
     | Prefix "forward " num -> Forward (Int64.Parse num)
     | Prefix "up " num -> Up (Int64.Parse num)
     | Prefix "down " num -> Down (Int64.Parse num)
+    | _ -> failwith "failed to parse"
 
 let input =
     IO.File.ReadAllLines "Day2.txt"

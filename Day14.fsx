@@ -14,7 +14,7 @@ let parser: Parser<_> =
     pipe3 (anyChar) (anyChar) (pstring " -> " >>. anyChar) (fun left right center -> (left, right), center)
 
 let pairMapping key =
-    System.IO.File.ReadAllLines "Day13.txt"
+    System.IO.File.ReadAllLines "Day14.txt"
     |> Seq.map (parse parser)
     |> Map
     |> Map.find key
